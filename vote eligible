@@ -1,0 +1,14 @@
+#include<iostream.h>
+#include<conio.h>
+using namespace std
+int main(){
+clrscr();
+int age;
+cout<<"Enter yourage";
+cin>>age;
+if(age>=18)
+cout<<"\nYou are eligible to vote.";
+else
+cout<<"\nSorry!!You are not eligible to vote. ";
+getch();
+}
