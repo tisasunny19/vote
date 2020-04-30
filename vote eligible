@@ -11,4 +11,5 @@ cout<<"\nYou are eligible to vote.";
 else
 cout<<"\nSorry!!You are not eligible to vote. ";
 getch();
+return 0;
 }
