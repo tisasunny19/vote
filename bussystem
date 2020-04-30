@@ -1,0 +1,90 @@
+#include<conio.h>
+#include<iostream.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+using namespace std;
+static int p=0;
+
+class bu{
+private:
+
+char bno[5],dri[20],arr[30],dep[30],fro[30],to[30],seat[8][4][10];
+public:
+
+}bus[20]
+void bu::install(){
+cout<<"\nEnter bus Number ";
+cin>>bus[p].bno;
+cout<<"Enter Driver's name : ";
+cin>>bus[p].dri;
+cout<<"\nEnter bus Arrival ";
+cin>>bus[p].arr;
+cout<<"Enter departure time : ";
+cin>>bus[p].dep;
+cout<<"\nFrom :";
+cin>>bus[p].fro;
+cout<<"\nTo :";
+cin>>bus[p].to;
+bus[p].empty();
+p++;
+}
+void bu::allotment(){
+int seat;
+char num[5];
+top:
+cout<<"\nBus number :";
+cin>>num;
+int n;
+for(n=0;n<=p;n++)
+{
+ if(strcmp(bus[n].bno,num)==0)
+ break;
+ }
+ while(n<=p){
+ cout<<"\nSeat number";
+ cin>>seat;
+ if(seat>32){
+ cout<<"There are only 32 bus seats available";
+ else
+ { if(strcmp(bus[n].seat[seat/4][(seat%4)-1],"Empty)==0)
+    {
+      cout<<"\nEnter passenger name :";
+      cin>>bus[n].seat[seat/4][(seat%4)-1];
+      break;
+      }
+     else
+     cout<<"\nSeat is already Reserved";
+     }
+    }
+   if(n>p)
+   {
+    cout<<"\nEnter correct bus number : ";
+    goto top;
+    }
+  }
+  void bu::empty(){
+   for(int i=0;i<8;i++)
+    {
+     for(int j=0;j<4;j++)
+      {
+       strcpy(bus[p],seat[i][j],"Empty");
+       }
+     }
+   }
+  void bu::show(){
+  int n;
+  char num[5];
+  cout<<"\nBus number :";
+cin>>num;
+
+for(n=0;n<=p;n++)
+{
+ if(strcmp(bus[n].bno,num)==0)
+  break;
+ }
+ while(n<=p){
+ cout<<"\nBus No.:"<<bus[n].bno<<"\tBus Driver:"<<bus[n].dri<<"\nArrival:"<<bus[n].arr<<"\tDeparture:"<<bus[n].dep<<"\nFrom:"<<bus[n].fro<<"\tTo:"<<bus[n].to;
+ bus[0].position(n);
+ 
+    
