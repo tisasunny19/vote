@@ -1,0 +1,14 @@
+#include<iostream.h>
+using namespace std
+int main(){
+int a[10],*p,n,i;
+cout<<"Enter array size ";
+cin>>n;
+cout<<"\nEnter elements ";
+for(int i=0;i<n;i++)
+cin>>a[i];
+cout<<"\nYou Entered : ";
+for(i=0;i<n;i++)
+cout<<*(p+i)<<"\n";
+return 0;
+}
