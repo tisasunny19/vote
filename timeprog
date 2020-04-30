@@ -1,0 +1,16 @@
+#include<iostream.h>
+using namespace std
+class time{
+int hr,min,sec,sum;
+}t;
+int main(){
+cout<<"\nEnter Time : \nHours? ";
+cin>>t.hr;
+cout<<"\nMinutes? ";
+cin>>t.min;
+cout<<"\nSeconds? ";
+cin>>t.sec;;
+t.sum=(t.hr*60*60)+(t.min*60)+t.sec;
+cout<<"\nTime in Total seconds : "<<t.sum;
+return 0;
+}
