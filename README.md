@@ -1,0 +1,2 @@
+# vote
+c++ vote program
